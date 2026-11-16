@@ -88,4 +88,6 @@ Work in this repo and push to `main` as often as you like. Each push runs the ch
 }
 ```
 
-`stage` and the two dates are `null` when the submission isn't under review. Dates are the Pacific-time day the window closes. `waiting_on` lists `"submitter"` and/or reviewer ids. The checks don't cover everything, so passing them doesn't mean you're done. Please don't edit `tests/` or `.github/`.
+`stage` and the two dates are `null` when the submission isn't under review. Dates are the Pacific-time day the window closes. `waiting_on` lists `"submitter"` and/or reviewer ids. `penalty_stage` is the highest stage from item 3, or `0` if nothing is waiting on the submitter or it isn't under review.
+
+The checks don't cover everything, so passing them doesn't mean you're done. The run already on `main` fails because there's no tool yet; that's expected. Please don't edit `tests/` or `.github/`. On Windows, mark the file executable with `git update-index --chmod=+x review-status`.
